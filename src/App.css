@@ -191,6 +191,8 @@ body {
   font-size: 16px;
   font-family: inherit;
   outline: none;
+  background-color: aliceblue;
+  color: #0f172a;
 }
 
 
@@ -203,6 +205,7 @@ body {
 .contact-form textarea {
   height: 100px;
   resize: vertical;
+  
 }
 
 
@@ -225,7 +228,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 100%) {
   .navbar {
     padding: 20px;
   }
@@ -261,4 +264,22 @@ body {
 
     max-width: 350px;
   }
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.character-count {
+  font-size: 14px;
+  color: #64748b;
+  text-align: left;
 }

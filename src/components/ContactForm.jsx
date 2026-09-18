@@ -4,16 +4,31 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
   const [formMessage, setFormMessage] = useState("");
+  const [error, setError] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
-      setFormMessage("Please fill all the fields.");
-    } else {
-      setFormMessage("Thank you! We will contact you soon.");
+      setError("Please fill all the fields.");
+      setFormMessage("");
+      return;
     }
+
+    if (!email.includes("@")) {
+      setError("Please enter a valid email address.");
+      setFormMessage("");
+      return;
+    }
+
+    setError("");
+    setFormMessage("Thank you! We will contact you soon.");
+
+    setName("");
+    setEmail("");
+    setMessage("");
   }
 
   return (
@@ -29,7 +44,7 @@ function ContactForm() {
         />
 
         <input
-          type="email"
+          type="text"
           placeholder="Email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
@@ -41,11 +56,17 @@ function ContactForm() {
           onChange={(event) => setMessage(event.target.value)}
         ></textarea>
 
+        <p className="character-count">
+          Characters: {message.length}
+        </p>
+
         <button type="submit" className="send-button">
           SEND
         </button>
 
-        <p>{formMessage}</p>
+        {error && <p className="error-message">{error}</p>}
+
+        {formMessage && <p className="success-message">{formMessage}</p>}
       </form>
     </section>
   );

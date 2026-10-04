@@ -1,16 +1,41 @@
-# React + Vite
+# Brillarix React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my React learning project built with Vite.
 
-Currently, two official plugins are available:
+## What I learned
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React project setup with Vite
+- Components
+- Props
+- useState
+- Controlled inputs
+- Form validation
+- Rendering lists with map
+- Delete functionality using filter
+- Adding new items using spread operator
+- Parent-child component structure
+- Passing functions as props
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Navbar
+- Hero section
+- Services section
+- Contact form
+- Patient list
+- Add patient
+- Delete patient
+- Empty-list message
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- CSS
+
+## How to run locally
+
+```bash
+npm install
+npm run dev

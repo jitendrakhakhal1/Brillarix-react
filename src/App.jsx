@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import ContactForm from "./components/ContactForm";
+import PatientList from "./components/PatientList";
+
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Hero />
       <Services />
       <ContactForm />
+      <PatientList/>
+      
     </div> 
   );
 }
